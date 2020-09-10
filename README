@@ -1,0 +1,19 @@
+	In cadrul acestei teme, in care a trebuit sa implementam un minishell Unix, am creat initial fisierul "list.h" in care am construit scheletul listelor simplu inlantuite de fisiere si directoare, cat si scrierea antetelor de functii implementate in list.c si folosite in main.c. Headerul "file.h" contine scheletul unui director si al unui fisier.
+	Consider ca aceasta tema a fost utila intrucat am inteles pe deplin cum functioneaza o lista inlantuita. Din punctul meu de vedere implementarea este buna, desigur era loc de imbunatatiri precum implementarea unei liste generice ce ar fi generalizat codul si as fi ramas cu o singura lista in loc de doua. In cadrul temei am implementat complet intreg enuntul.
+	In tema am adaugat si doua functii ce nu erau mentionate in enunt, dar care sunt utile, respectiv deletelistF si deletelistD. DeletelistF sterge toate fisierele din director( se comporta exact ca "rm *", deci putea fii implementat cu usurinta aceasta optiune. De asemenea deletelistD sterge recursiv lista de directoare cat si lista de fisiere din fiecare director al listei( se comporta ca rm -r * ).
+	De-alungul temei am intampinat diferite dificultati la testul12, cand nu am observat ca se da comanda "cd .." din root, dar a fost rezolvata ulterior. A fost o tema interesanta in care am descoperit cum as putea construii un shell de la 0 pe baza listelor inlantuite si cat de utile sunt acestea in realitate. Makefile-ul contine reguli de: build pentru fiecare fisier cod sursa in parte, clean si run.
+	In tema am folosit diferite functii precum : - create ls ( creeaza sistemul de fisier, asociaza pointerului CurrentDir structura "root" )
+						     - touch ( creeaza un fisier ) 
+						     - mkdir ( creeaza un director )
+						     - ls ( afiseaza continutul directorului curent ( CurrentDir ) )
+						     - pwd ( afiseaza calea curenta, respectiv unde ne aflam in sistemul de fisiere pornind de la radacina )
+						     - cd ( schimba directorul curent ( modifica pointerul CurrentDir) )
+						     - tree ( afiseaza recursiv directoarele si fisierele pornind din fisierul curent ) 
+						     - rm ( sterge un fisier din directorul curent )
+						     - rmdir ( sterge un director )
+						     - deletelistF ( sterge lista de fisiere a directorului curent eliberand memoria ) 
+						     - deletelistD ( sterge lista de directoare recursiv, tinand cont sa elibereze lista de fisiere a fiecarui director ) 
+						     - find ( cauta recursiv prin lista de directoare un anumit fisier cu un anumit continut, de o anumita dimensiune )
+						     - deletefs ( sterge sistemul de fisiere ) 
+
+
